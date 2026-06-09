@@ -1,0 +1,37 @@
+{
+  "version": "v3",
+  "model_file": "highway_model_v3_fp16.tflite",
+  "backbone": "MobileNetV2 (FP16 TFLite 경량화)",
+  "image_size": [
+    224,
+    224
+  ],
+  "classes": [
+    "Cultivator",
+    "Electric Scooter",
+    "Excavator",
+    "Rear Car",
+    "Stacker",
+    "Tractor",
+    "Wheelchair",
+    "car",
+    "person",
+    "motorcycle"
+  ],
+  "prohibited": [
+    "Cultivator",
+    "Electric Scooter",
+    "Excavator",
+    "Rear Car",
+    "Stacker",
+    "Tractor",
+    "Wheelchair",
+    "person",
+    "motorcycle"
+  ],
+  "allowed": [
+    "car"
+  ],
+  "trained_at": "2026-05-28",
+  "description": "3차 학습 - FP16 TFLite 경량화, 고속도로 진입금지 차량 분류"
+}
