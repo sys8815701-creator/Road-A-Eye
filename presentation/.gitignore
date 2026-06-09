@@ -2,5 +2,3 @@ node_modules/
 .next/
 tsconfig.tsbuildinfo
 next-env.d.ts
-# GitHub 100MB 초과 — 별도 호스팅 필요
-members/demo.mp4
