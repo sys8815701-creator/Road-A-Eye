@@ -1,0 +1,5 @@
+# 실제 DB 덤프(개인정보 포함) 절대 커밋 금지 — 스키마(schema/*.sql)만 허용
+*.sql.gz
+*_dump.sql
+backup.log
+db_backups/
