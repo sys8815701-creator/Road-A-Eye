@@ -1,0 +1,23 @@
+Host ai
+    HostName 192.168.0.246
+    User ai4jo2
+    IdentityFile ~/.ssh/id_ed25519
+    StrictHostKeyChecking no
+
+Host back
+    HostName 192.168.0.247
+    User back4jo2
+    IdentityFile ~/.ssh/id_ed25519
+    StrictHostKeyChecking no
+
+Host front
+    HostName 192.168.0.248
+    User front4jo2
+    IdentityFile ~/.ssh/id_ed25519
+    StrictHostKeyChecking no
+
+Host db
+    HostName 192.168.0.249
+    User db4jo
+    IdentityFile ~/.ssh/id_ed25519
+    StrictHostKeyChecking no

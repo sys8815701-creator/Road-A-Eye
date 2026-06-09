@@ -1,0 +1,10 @@
+# 개인키 절대 커밋 금지 (공개키 .pub 는 허용)
+id_ed25519
+id_rsa
+id_ecdsa
+id_*
+github_roadaeye
+github_*
+*.pem
+*.key
+!*.pub
