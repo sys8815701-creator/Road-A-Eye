@@ -1,0 +1,7 @@
+.env
+venv/
+__pycache__/
+*.pyc
+*.pyo
+captures/
+grep ".env" /home/back4jo2/FastAPI/.gitignore
