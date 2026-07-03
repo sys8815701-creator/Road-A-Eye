@@ -45,7 +45,7 @@ async def lifespan(app: FastAPI):
     from models.admin_orm import ActivityLog, SystemConfig
 
     # 테이블 자동 생성 — 이 서버(247) 담당 DB만 생성
-    # ai_db(192.168.0.250)는 AI 서버(246)가 담당 → 여기서 생성하지 않음
+    # ai_db(<AI_DB_VIP>)는 AI 서버(246)가 담당 → 여기서 생성하지 않음
     async with member_engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all, tables=[
             User.__table__, EmailVerification.__table__, UserSetting.__table__,

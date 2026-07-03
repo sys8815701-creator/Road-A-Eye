@@ -303,8 +303,8 @@ const dbDetail: DetailCard[] = [
   ] },
   { badge: '3', title: 'Keepalived 자동 페일오버', items: [
     'VRRP 가상 IP(VIP) 이중화 구성',
-    'ai_db VIP 192.168.0.250 (246 ↔ 장애 시 249)',
-    'member · board · chat_db VIP 192.168.0.251 (247 ↔ 장애 시 249)',
+    'ai_db VIP <AI_DB_VIP> (246 ↔ 장애 시 249)',
+    'member · board · chat_db VIP <SHARED_DB_VIP> (247 ↔ 장애 시 249)',
     'check_mysql.sh 헬스체크 (2초 간격, mysqladmin ping)',
     '장애 감지 시 priority -20 → 대기 노드로 무중단 전환',
   ] },

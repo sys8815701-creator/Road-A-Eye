@@ -14,12 +14,12 @@ type Server = {
 
 const servers: Server[] = [
   {
-    icon: '🤖', vip: 'VIP 192.168.0.250 (BACKUP)', name: 'AI 서버', ip: '<AI_SERVER_IP>', role: 'FastAPI :8001', accent: '#7c3aed',
+    icon: '🤖', vip: 'VIP <AI_DB_VIP> (BACKUP)', name: 'AI 서버', ip: '<AI_SERVER_IP>', role: 'FastAPI :8001', accent: '#7c3aed',
     tags: ['YOLO 추론', 'Keras 분류', 'LLM 챗봇'],
     badges: [{ label: 'ai_db (server-id=1)', tone: 'db' }],
   },
   {
-    icon: '⚙️', vip: 'VIP 192.168.0.251 (MASTER)', name: 'Back-end 서버', ip: '<BACK_SERVER_IP>', role: 'FastAPI :8000', accent: '#0d9488',
+    icon: '⚙️', vip: 'VIP <SHARED_DB_VIP> (MASTER)', name: 'Back-end 서버', ip: '<BACK_SERVER_IP>', role: 'FastAPI :8000', accent: '#0d9488',
     tags: ['REST API', 'JWT 인증', 'AI 프록시'],
     badges: [{ label: 'member_db', tone: 'db' }, { label: 'board_db', tone: 'db' }, { label: 'chat_db', tone: 'db' }],
   },
@@ -29,7 +29,7 @@ const servers: Server[] = [
     badges: [{ label: 'DB 직접 접속 없음', tone: 'warn' }],
   },
   {
-    icon: '🗄️', vip: 'VIP 192.168.0.250 (MASTER)', name: 'DB 백업 서버', ip: '<DB_SERVER_IP>', role: 'MySQL :3306', accent: '#dc2626',
+    icon: '🗄️', vip: 'VIP <AI_DB_VIP> (MASTER)', name: 'DB 백업 서버', ip: '<DB_SERVER_IP>', role: 'MySQL :3306', accent: '#dc2626',
     tags: ['Keepalived', 'Failover 대기'],
     badges: [{ label: 'ai_db', tone: 'db' }, { label: 'member_db', tone: 'db' }, { label: 'board_db', tone: 'db' }, { label: 'chat_db', tone: 'db' }],
   },
@@ -179,7 +179,7 @@ export default function Chapter5_2() {
               textAlign: 'center', marginTop: 14, fontSize: 14, color: '#5B8CAE', fontWeight: 700,
               background: '#eef4f8', border: '1px solid #d8e6f0', borderRadius: 10, padding: '8px 12px',
             }}>
-              Keepalived VIP 192.168.0.250 / 192.168.0.251 기반 자동 Failover
+              Keepalived VIP <AI_DB_VIP> / <SHARED_DB_VIP> 기반 자동 Failover
             </div>
           </div>
         </div>

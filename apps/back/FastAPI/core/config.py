@@ -13,29 +13,29 @@ _ENV_FILE = Path(__file__).parent.parent / ".env"
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=str(_ENV_FILE), env_file_encoding="utf-8", extra="ignore")
 
-    # member_db (VIP: 192.168.0.251 → 247 백엔드서버 / 장애시 249 DB서버)
-    DB_MEMBER_HOST:     str = "192.168.0.251"
+    # member_db (VIP: <SHARED_DB_VIP> → 247 백엔드서버 / 장애시 249 DB서버)
+    DB_MEMBER_HOST:     str = "<SHARED_DB_VIP>"
     DB_MEMBER_PORT:     int = 3306
     DB_MEMBER_NAME:     str = "member_db"
     DB_MEMBER_USER:     str = "member_user"
     DB_MEMBER_PASSWORD: str = ""
 
-    # board_db (VIP: 192.168.0.251)
-    DB_BOARD_HOST:     str = "192.168.0.251"
+    # board_db (VIP: <SHARED_DB_VIP>)
+    DB_BOARD_HOST:     str = "<SHARED_DB_VIP>"
     DB_BOARD_PORT:     int = 3306
     DB_BOARD_NAME:     str = "board_db"
     DB_BOARD_USER:     str = "board_user"
     DB_BOARD_PASSWORD: str = ""
 
-    # ai_db (VIP: 192.168.0.250 → 246 AI서버 / 장애시 249 DB서버)
-    DB_AI_HOST:     str = "192.168.0.250"
+    # ai_db (VIP: <AI_DB_VIP> → 246 AI서버 / 장애시 249 DB서버)
+    DB_AI_HOST:     str = "<AI_DB_VIP>"
     DB_AI_PORT:     int = 3306
     DB_AI_NAME:     str = "ai_db"
     DB_AI_USER:     str = "ai_user"
     DB_AI_PASSWORD: str = ""
 
-    # chat_db (VIP: 192.168.0.251)
-    DB_CHAT_HOST:     str = "192.168.0.251"
+    # chat_db (VIP: <SHARED_DB_VIP>)
+    DB_CHAT_HOST:     str = "<SHARED_DB_VIP>"
     DB_CHAT_PORT:     int = 3306
     DB_CHAT_NAME:     str = "chat_db"
     DB_CHAT_USER:     str = "chat_user"

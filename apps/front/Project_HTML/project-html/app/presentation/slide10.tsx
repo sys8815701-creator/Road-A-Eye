@@ -14,11 +14,11 @@ type Server = {
 
 const servers: Server[] = [
   {
-    icon: '🤖', accent: '#7c3aed', vip: 'VIP 192.168.0.250', name: 'AI 서버', ip: '<AI_SERVER_IP>',
+    icon: '🤖', accent: '#7c3aed', vip: 'VIP <AI_DB_VIP>', name: 'AI 서버', ip: '<AI_SERVER_IP>',
     role: 'PRIMARY (MASTER)', dbs: ['ai_db (server-id=1)'],
   },
   {
-    icon: '⚙️', accent: '#0d9488', vip: 'VIP 192.168.0.251', name: 'Back-end 서버', ip: '<BACK_SERVER_IP>',
+    icon: '⚙️', accent: '#0d9488', vip: 'VIP <SHARED_DB_VIP>', name: 'Back-end 서버', ip: '<BACK_SERVER_IP>',
     role: 'PRIMARY (MASTER)', dbs: ['member_db (server-id=2)', 'board_db', 'chat_db'],
   },
   {
