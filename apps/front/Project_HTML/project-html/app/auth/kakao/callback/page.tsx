@@ -31,7 +31,7 @@ function KakaoCallbackContent() {
 
       try {
         // 2. 백엔드에 인증 코드 전송 (백엔드가 카카오와 토큰 교환)
-        const backendUrl = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+        const backendUrl = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
         const res = await fetch(`${backendUrl}/auth/kakao/callback?code=${code}`, {
           method: "GET",
         });
@@ -52,7 +52,7 @@ function KakaoCallbackContent() {
 
           // 토큰으로 사용자 정보 조회 후 저장
           try {
-            const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+            const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
             const meRes = await fetch(API_URL + "/auth/me", {
               headers: { Authorization: "Bearer " + data.access_token },
             });

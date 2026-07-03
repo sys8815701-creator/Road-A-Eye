@@ -10,7 +10,7 @@ export default function AboutInfoPage() {
       <header className={styles.infoHeader}>
         <h1>개발 정보</h1>
         <p>고속도로 CCTV AI 위험차량 감지 시스템 (MBC 아카데미 AI-X 3기 최종 프로젝트)</p>
-        <p>4개 서버 분산 구조: Front(192.168.0.248) / Back(192.168.0.247) / AI(192.168.0.246) / DB(192.168.0.249)</p>
+        <p>4개 서버 분산 구조: Front(<FRONT_SERVER_IP>) / Back(<BACK_SERVER_IP>) / AI(<AI_SERVER_IP>) / DB(<DB_SERVER_IP>)</p>
         <p>조장 노형래 | 부조장 이지건 | 조원 임효정, 김사브리나, 심유경</p>
       </header>
 
@@ -30,7 +30,7 @@ export default function AboutInfoPage() {
             <div className={`${styles.archNodeBox} ${styles.highlight}`}>
               <strong>AI 서버</strong>
               <span>YOLOv11 · FastAPI</span>
-              <span>192.168.0.246</span>
+              <span><AI_SERVER_IP></span>
             </div>
             <span className={styles.archNodeLabel}>객체 탐지 · 분류</span>
           </div>
@@ -39,7 +39,7 @@ export default function AboutInfoPage() {
             <div className={styles.archNodeBox}>
               <strong>백엔드 API</strong>
               <span>FastAPI · Python</span>
-              <span>192.168.0.247</span>
+              <span><BACK_SERVER_IP></span>
             </div>
             <span className={styles.archNodeLabel}>REST API · 비즈니스 로직</span>
           </div>
@@ -48,7 +48,7 @@ export default function AboutInfoPage() {
             <div className={styles.archNodeBox}>
               <strong>DB 서버</strong>
               <span>MySQL 8.0</span>
-              <span>192.168.0.249</span>
+              <span><DB_SERVER_IP></span>
             </div>
             <span className={styles.archNodeLabel}>감지 기록 · 사용자 정보</span>
           </div>
@@ -57,7 +57,7 @@ export default function AboutInfoPage() {
             <div className={`${styles.archNodeBox} ${styles.highlight}`}>
               <strong>프론트엔드</strong>
               <span>Next.js 16 · SSE</span>
-              <span>192.168.0.248</span>
+              <span><FRONT_SERVER_IP></span>
             </div>
             <span className={styles.archNodeLabel}>관제 대시보드 · 알림</span>
           </div>

@@ -10,8 +10,8 @@ class Settings(BaseSettings):
     its_api_key: str = ""
     its_api_base_url: str = "https://openapi.its.go.kr:9443/cctvInfo"
 
-    ai_backend_url: str = "http://192.168.0.247:8000"
-    ai_server_url: str = "http://192.168.0.246:8001"
+    ai_backend_url: str = "http://<BACK_SERVER_IP>:8000"
+    ai_server_url: str = "http://<AI_SERVER_IP>:8001"
 
     db_host: str = ""
     db_port: int = 3306

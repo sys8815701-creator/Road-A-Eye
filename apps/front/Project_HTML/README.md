@@ -1,7 +1,7 @@
 # ROAD A EYE — Front-end (Project_HTML)
 
 고속도로 CCTV AI 위험차량 감지 관제 시스템의 **프론트엔드**입니다.
-Front 서버(192.168.0.248 :3000)에서 동작하며, 백엔드 API 서버(192.168.0.247 :8000)와 연동합니다.
+Front 서버(<FRONT_SERVER_IP> :3000)에서 동작하며, 백엔드 API 서버(<BACK_SERVER_IP> :8000)와 연동합니다.
 
 ## 구성
 

@@ -209,4 +209,4 @@ for p in prohib_sample:
 
 print("\n학습 완료!")
 print(f"모델 저장 위치: {OUTPUT_PATH}")
-print("업로드: http://192.168.0.246:8001/model-upload 에서 확인 가능")
+print("업로드: http://<AI_SERVER_IP>:8001/model-upload 에서 확인 가능")

@@ -274,7 +274,7 @@ python keras_finetune_v13.py \
 ### Step 7. 서버 업로드
 
 ```
-브라우저: http://192.168.0.246:8001/model-upload
+브라우저: http://<AI_SERVER_IP>:8001/model-upload
 → Keras v3 선택 → highway_model_v13.keras 업로드
 ```
 

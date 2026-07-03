@@ -60,7 +60,7 @@ function GoogleCallbackContent() {
 
           // 토큰으로 사용자 정보 조회 후 저장
           try {
-            const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+            const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
             const meRes = await fetch(API_URL + "/auth/me", {
               headers: { Authorization: "Bearer " + data.access_token },
             });

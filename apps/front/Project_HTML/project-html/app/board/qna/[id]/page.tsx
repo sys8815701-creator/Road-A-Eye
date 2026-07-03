@@ -45,7 +45,7 @@ function fileKind(name: string): "image" | "video" | "file" {
   return "file";
 }
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
 
 export default function QNADetailPage() {
   usePageTitle("Q&A 상세");

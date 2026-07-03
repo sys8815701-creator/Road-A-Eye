@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const BACKEND = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+const BACKEND = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
 
 export async function GET(
   req: NextRequest,

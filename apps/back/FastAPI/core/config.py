@@ -87,7 +87,7 @@ class Settings(BaseSettings):
     IMAGE_BASE_URL: str = "http://localhost:8000/images"
 
     # AI 서버 주소
-    AI_SERVER_URL: str = "http://192.168.0.246:8001"
+    AI_SERVER_URL: str = "http://<AI_SERVER_IP>:8001"
     AI_API_KEY:    str = ""
 
     # 프론트엔드 주소 (CORS)

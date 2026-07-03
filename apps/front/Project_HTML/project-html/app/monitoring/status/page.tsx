@@ -7,7 +7,7 @@ import styles from "./status.module.css";
 import { usePageTitle } from "@/app/hooks/usePageTitle";
 import { useModal } from "@/context/ModalContext";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
 
 interface DailyStats {
     total:     number;

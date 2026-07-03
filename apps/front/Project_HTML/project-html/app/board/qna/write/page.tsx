@@ -124,7 +124,7 @@ export default function QNAWritePage() {
     setIsSubmitting(true);
     try {
       const token = localStorage.getItem("access_token");
-      const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+      const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
 
       const plainText = quillInstance.current?.root?.innerHTML?.trim() || content;
 

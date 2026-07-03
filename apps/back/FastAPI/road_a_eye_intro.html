@@ -601,13 +601,13 @@
         </div>
         <div class="arch-arrow">⟷</div>
         <div class="arch-node node-front">
-          <div class="node-ip">192.168.0.248</div>
+          <div class="node-ip"><FRONT_SERVER_IP></div>
           <div class="node-name">🖥 Front Server</div>
           <div class="node-role">React 프론트엔드</div>
         </div>
         <div class="arch-arrow">⟷</div>
         <div class="arch-node node-api">
-          <div class="node-ip">192.168.0.247 (VIP .251)</div>
+          <div class="node-ip"><BACK_SERVER_IP> (VIP .251)</div>
           <div class="node-name">⚙ API Server</div>
           <div class="node-role">FastAPI 백엔드</div>
         </div>
@@ -618,19 +618,19 @@
 
       <div class="arch-row">
         <div class="arch-node node-ai">
-          <div class="node-ip">192.168.0.246 (VIP .250)</div>
+          <div class="node-ip"><AI_SERVER_IP> (VIP .250)</div>
           <div class="node-name">🤖 AI Server</div>
           <div class="node-role">OpenCV + AI Model</div>
         </div>
         <div class="arch-arrow">→</div>
         <div class="arch-node node-api">
-          <div class="node-ip">192.168.0.247</div>
+          <div class="node-ip"><BACK_SERVER_IP></div>
           <div class="node-name">⚙ API Server</div>
           <div class="node-role">감지 데이터 수신</div>
         </div>
         <div class="arch-arrow">⟷</div>
         <div class="arch-node node-db">
-          <div class="node-ip">192.168.0.249</div>
+          <div class="node-ip"><DB_SERVER_IP></div>
           <div class="node-name">🗄 DB Server</div>
           <div class="node-role">MySQL Failover</div>
         </div>
@@ -647,7 +647,7 @@
         </div>
         <div class="arch-arrow">→</div>
         <div class="arch-node node-api">
-          <div class="node-ip">192.168.0.247</div>
+          <div class="node-ip"><BACK_SERVER_IP></div>
           <div class="node-name">⚙ API Server</div>
           <div class="node-role">CCTV 동기화</div>
         </div>
@@ -663,7 +663,7 @@
     <!-- 서버 카드 -->
     <div class="server-cards">
       <div class="server-card node-ai">
-        <div class="sc-ip">192.168.0.246</div>
+        <div class="sc-ip"><AI_SERVER_IP></div>
         <div class="sc-name">🤖 AI Server</div>
         <div class="sc-role">이상물체 탐지 · OpenCV 영상 분석</div>
         <div class="sc-specs">
@@ -674,7 +674,7 @@
         </div>
       </div>
       <div class="server-card node-api">
-        <div class="sc-ip">192.168.0.247</div>
+        <div class="sc-ip"><BACK_SERVER_IP></div>
         <div class="sc-name">⚙ API Server</div>
         <div class="sc-role">FastAPI 백엔드 · CCTV 스트리밍</div>
         <div class="sc-specs">
@@ -685,7 +685,7 @@
         </div>
       </div>
       <div class="server-card node-front">
-        <div class="sc-ip">192.168.0.248</div>
+        <div class="sc-ip"><FRONT_SERVER_IP></div>
         <div class="sc-name">🖥 Front Server</div>
         <div class="sc-role">React 프론트엔드 · 관제 대시보드</div>
         <div class="sc-specs">
@@ -695,7 +695,7 @@
         </div>
       </div>
       <div class="server-card node-db">
-        <div class="sc-ip">192.168.0.249</div>
+        <div class="sc-ip"><DB_SERVER_IP></div>
         <div class="sc-name">🗄 DB Server</div>
         <div class="sc-role">MySQL Failover · 전체 DB 장애 대비</div>
         <div class="sc-specs">
@@ -842,7 +842,7 @@
       <div style="display:flex;align-items:center;gap:1.5rem;padding:1.25rem 2rem;background:#fdf4ff;border-bottom:1.5px solid var(--gray-200);">
         <div style="font-size:1.5rem;width:44px;text-align:center;">⚛</div>
         <div style="flex:1;">
-          <div style="font-weight:800;color:#6b21a8;font-size:0.95rem;">Client Layer — React (192.168.0.248)</div>
+          <div style="font-weight:800;color:#6b21a8;font-size:0.95rem;">Client Layer — React (<FRONT_SERVER_IP>)</div>
           <div style="font-size:0.8rem;color:#9333ea;margin-top:0.2rem;">관제 대시보드 UI · CCTV 스트리밍 화면 · 알람 수신</div>
         </div>
         <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
@@ -909,7 +909,7 @@
       <div style="display:flex;align-items:center;gap:1.5rem;padding:1.25rem 2rem;background:#fff7ed;">
         <div style="font-size:1.5rem;width:44px;text-align:center;">🗄</div>
         <div style="flex:1;">
-          <div style="font-weight:800;color:#9a3412;font-size:0.95rem;">Database — MySQL (192.168.0.249)</div>
+          <div style="font-weight:800;color:#9a3412;font-size:0.95rem;">Database — MySQL (<DB_SERVER_IP>)</div>
           <div style="font-size:0.8rem;color:#ea580c;margin-top:0.2rem;">road_a_eye DB · 서버 시작 시 create_all 자동 생성 · 금지 클래스 자동 시딩</div>
         </div>
         <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">

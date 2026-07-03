@@ -51,7 +51,7 @@ interface FrameResult {
 
 type ConnState = "connecting" | "open" | "closed" | "error";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
 
 // fetch는 status=UNREAD만 받으므로 모든 알림은 "critical" 레벨로 고정 표시
 const ALERT_LEVEL = "critical";

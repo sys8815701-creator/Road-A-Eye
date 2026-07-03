@@ -37,7 +37,7 @@ interface BugDetail {
   attachments: Attachment[];
 }
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
 
 function fileKind(name: string): "image" | "video" | "file" {
   const ext = name.split(".").pop()?.toLowerCase();

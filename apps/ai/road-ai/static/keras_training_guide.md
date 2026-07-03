@@ -255,7 +255,7 @@ Epoch 2/20
 학습 완료 후 서버에 업로드합니다.
 
 ```
-브라우저에서: http://192.168.0.246:8001/model-upload
+브라우저에서: http://<AI_SERVER_IP>:8001/model-upload
 
 1. 모델 타입 → Keras v3 선택
 2. 파일 선택 → highway_model_v13.keras
@@ -303,5 +303,5 @@ ResourceExhaustedError: OOM when allocating tensor
         ↓ (GPU 약 20분)
 ④ 최종 검증에서 이상값 테스트 ✅ 확인
         ↓
-⑤ http://192.168.0.246:8001/model-upload → Keras v3 → v13.keras 업로드
+⑤ http://<AI_SERVER_IP>:8001/model-upload → Keras v3 → v13.keras 업로드
 ```

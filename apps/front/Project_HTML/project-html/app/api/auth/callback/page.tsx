@@ -18,7 +18,7 @@ function AuthCallbackContent() {
 
     localStorage.setItem("access_token", token);
 
-    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
 
     fetch(API_URL + "/auth/me", {
       headers: { Authorization: "Bearer " + token },

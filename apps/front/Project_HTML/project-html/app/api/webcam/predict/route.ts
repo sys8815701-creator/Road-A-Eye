@@ -22,7 +22,7 @@ async function loadForbiddenMap(): Promise<Record<string, number>> {
   if (cachedForbiddenMap && Date.now() - cacheTime < CACHE_TTL_MS) {
     return cachedForbiddenMap;
   }
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
   try {
     const res = await fetch(`${apiUrl}/cctv/classes?active_only=true`, {
       cache: "no-store",
@@ -57,7 +57,7 @@ async function loadForbiddenMap(): Promise<Record<string, number>> {
 
 export async function POST(request: Request) {
   try {
-    const aiServerUrl = process.env.AI_SERVER_URL || "http://192.168.0.246:8001";
+    const aiServerUrl = process.env.AI_SERVER_URL || "http://<AI_SERVER_IP>:8001";
     const aiApiKey    = process.env.AI_API_KEY;
 
     if (!aiApiKey) {

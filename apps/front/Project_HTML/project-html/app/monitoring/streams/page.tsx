@@ -8,7 +8,7 @@ import ConfirmModal from "@/components/ConfirmModal";
 import { usePageTitle } from "@/app/hooks/usePageTitle";
 import { useModal } from "@/context/ModalContext";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
 const PRIORITY_CCTV_KEY = "roadeye:priority-cctvs";
 const PRIORITY_CCTV_SEEDED_KEY = "roadeye:priority-cctvs-seeded-v2";
 const RESULT_PAGE_SIZE = 8;

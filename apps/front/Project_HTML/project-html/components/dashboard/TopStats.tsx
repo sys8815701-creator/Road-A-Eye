@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Activity, Car, Video, Target, ShieldCheck } from "lucide-react";
 import styles from "./TopStats.module.css";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
 
 export default function TopStats() {
     const [total,       setTotal]       = useState<number>(0);

@@ -13,7 +13,7 @@ interface LogItem {
     status:       string;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
 
 const STATUS_LABEL: Record<string, string> = {
     UNREAD:    "미처리",

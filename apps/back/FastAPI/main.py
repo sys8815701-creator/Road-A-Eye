@@ -158,7 +158,7 @@ _allowed_origins = list({
     settings.FRONTEND_ORIGIN,
     "https://borrower-grandpa-implosion.ngrok-free.dev",
     "https://mbc-sw.iptime.org:3241",
-    "http://192.168.0.248:3000",
+    "http://<FRONT_SERVER_IP>:3000",
     "http://localhost:3000",
 })
 app.add_middleware(

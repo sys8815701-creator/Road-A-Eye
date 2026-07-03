@@ -30,7 +30,7 @@ interface Camera {
     is_active: boolean;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
 const WS_URL  = API_URL.replace("http://", "ws://").replace("https://", "wss://");
 
 export default function MonitoringPage() {

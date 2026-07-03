@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const AI_SERVER = process.env.AI_SERVER_URL || "http://192.168.0.246:8001";
+const AI_SERVER = process.env.AI_SERVER_URL || "http://<AI_SERVER_IP>:8001";
 const AI_KEY    = process.env.AI_API_KEY    || "";
 
 // Next.js 15+: params는 Promise

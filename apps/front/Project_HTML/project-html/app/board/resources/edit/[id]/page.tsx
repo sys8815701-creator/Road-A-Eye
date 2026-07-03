@@ -18,7 +18,7 @@ function formatSize(bytes: number): string {
   return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 }
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
 
 export default function ResourcesEditPage() {
   usePageTitle("자료 수정");

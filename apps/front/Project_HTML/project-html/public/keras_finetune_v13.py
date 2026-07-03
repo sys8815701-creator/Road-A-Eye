@@ -325,7 +325,7 @@ def main():
     # 저장
     model.save(args.output)
     print(f"\n✅ 모델 저장 완료: {args.output}")
-    print(f"   → http://192.168.0.246:8001/model-upload 에서 Keras v3로 업로드")
+    print(f"   → http://<AI_SERVER_IP>:8001/model-upload 에서 Keras v3로 업로드")
 
 if __name__ == "__main__":
     main()

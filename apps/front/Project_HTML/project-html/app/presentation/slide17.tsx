@@ -77,7 +77,7 @@ export default function Chapter8() {
             }}>
               <span style={{ fontSize: 12, color: '#22c55e', fontWeight: 800 }}>🔒</span>
               <span style={{ fontSize: 13, color: '#64748b', fontWeight: 600 }}>
-                192.168.0.248:3000
+                <FRONT_SERVER_IP>:3000
                 <span style={{ color: '#1e40af', fontWeight: 800 }}>/dashboard</span>
               </span>
             </div>

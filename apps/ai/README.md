@@ -12,9 +12,9 @@
 
 | 서버 | IP | 역할 |
 |---|---|---|
-| ai4jo2 | 192.168.0.246 | AI 추론 (road-ai :8001), 챗봇 (chatbot :8000) |
-| back4jo2 | 192.168.0.247 | FastAPI 백엔드 :8000, MySQL |
-| front4jo2 | 192.168.0.248 | Next.js 프론트엔드 :3000 |
+| ai4jo2 | <AI_SERVER_IP> | AI 추론 (road-ai :8001), 챗봇 (chatbot :8000) |
+| back4jo2 | <BACK_SERVER_IP> | FastAPI 백엔드 :8000, MySQL |
+| front4jo2 | <FRONT_SERVER_IP> | Next.js 프론트엔드 :3000 |
 
 ---
 
@@ -178,17 +178,17 @@ python road-ai/train_keras_gate_v15.py
 **road-ai/.env 필수 항목**
 ```
 AI_API_KEY=...
-DB_HOST=192.168.0.249
+DB_HOST=<DB_SERVER_IP>
 DB_USER=...
 DB_PASSWORD=...
 DB_NAME=ai_db
-BACKEND_URL=http://192.168.0.247:8000
+BACKEND_URL=http://<BACK_SERVER_IP>:8000
 ```
 
 **highway-chatbot-server/.env 필수 항목**
 ```
 OPENAI_API_KEY=...
-DB_HOST=192.168.0.249
+DB_HOST=<DB_SERVER_IP>
 DB_USER=...
 DB_PASSWORD=...
 DB_NAME=chat_db

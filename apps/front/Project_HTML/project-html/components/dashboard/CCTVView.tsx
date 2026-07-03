@@ -25,7 +25,7 @@ interface CCTVViewProps {
     focusTarget?: CctvFocusTarget | null;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
 
 type FitMode = "cover" | "contain";
 type WebcamAiState = "idle" | "analyzing" | "error";

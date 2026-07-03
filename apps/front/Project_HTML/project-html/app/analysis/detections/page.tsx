@@ -175,7 +175,7 @@ export default function DetectionsPage() {
   if (!authorized) return null;
 
   const pageItems = getPageItems(page, pages);
-  const imageBase = (process.env.NEXT_PUBLIC_AI_IMAGES_URL) || "http://192.168.0.246:8001";
+  const imageBase = (process.env.NEXT_PUBLIC_AI_IMAGES_URL) || "http://<AI_SERVER_IP>:8001";
 
   return (
     <div className={styles.wrapper}>

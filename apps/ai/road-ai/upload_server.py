@@ -18,7 +18,7 @@ button{background:#e11d48;color:white;border:none;padding:12px 28px;border-radiu
 button:hover{background:#be123c}.note{background:#fef2f2;border:1px solid #fecaca;padding:12px 16px;border-radius:8px;font-size:13px;margin-bottom:20px}
 </style></head><body>
 <h2>🚗 Road-AI 모델 파일 업로드</h2>
-<p>AI 서버(192.168.0.246)에 학습 모델을 업로드합니다.</p>
+<p>AI 서버(<AI_SERVER_IP>)에 학습 모델을 업로드합니다.</p>
 <div class=note>
   <b>YOLO 파일:</b> yolov11m_v3_best.pt<br>
   <b>Keras 파일:</b> highway_model_v3_fp16.tflite

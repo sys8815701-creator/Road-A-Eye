@@ -16,7 +16,7 @@ export async function GET(request: Request) {
 
   try {
     const { searchParams } = new URL(request.url);
-    const backendUrl = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+    const backendUrl = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
     const authorization = request.headers.get("authorization");
 
     if (!authorization) {

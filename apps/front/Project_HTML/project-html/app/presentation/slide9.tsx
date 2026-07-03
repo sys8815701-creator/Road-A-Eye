@@ -14,22 +14,22 @@ type Server = {
 
 const servers: Server[] = [
   {
-    icon: '🤖', vip: 'VIP 192.168.0.250 (BACKUP)', name: 'AI 서버', ip: '192.168.0.246', role: 'FastAPI :8001', accent: '#7c3aed',
+    icon: '🤖', vip: 'VIP 192.168.0.250 (BACKUP)', name: 'AI 서버', ip: '<AI_SERVER_IP>', role: 'FastAPI :8001', accent: '#7c3aed',
     tags: ['YOLO 추론', 'Keras 분류', 'LLM 챗봇'],
     badges: [{ label: 'ai_db (server-id=1)', tone: 'db' }],
   },
   {
-    icon: '⚙️', vip: 'VIP 192.168.0.251 (MASTER)', name: 'Back-end 서버', ip: '192.168.0.247', role: 'FastAPI :8000', accent: '#0d9488',
+    icon: '⚙️', vip: 'VIP 192.168.0.251 (MASTER)', name: 'Back-end 서버', ip: '<BACK_SERVER_IP>', role: 'FastAPI :8000', accent: '#0d9488',
     tags: ['REST API', 'JWT 인증', 'AI 프록시'],
     badges: [{ label: 'member_db', tone: 'db' }, { label: 'board_db', tone: 'db' }, { label: 'chat_db', tone: 'db' }],
   },
   {
-    icon: '</>', name: 'Front-end 서버', ip: '192.168.0.248', role: 'Next.js :3000', accent: '#6366f1',
+    icon: '</>', name: 'Front-end 서버', ip: '<FRONT_SERVER_IP>', role: 'Next.js :3000', accent: '#6366f1',
     tags: ['SSR / SSG', 'WebSocket', 'Leaflet 지도'],
     badges: [{ label: 'DB 직접 접속 없음', tone: 'warn' }],
   },
   {
-    icon: '🗄️', vip: 'VIP 192.168.0.250 (MASTER)', name: 'DB 백업 서버', ip: '192.168.0.249', role: 'MySQL :3306', accent: '#dc2626',
+    icon: '🗄️', vip: 'VIP 192.168.0.250 (MASTER)', name: 'DB 백업 서버', ip: '<DB_SERVER_IP>', role: 'MySQL :3306', accent: '#dc2626',
     tags: ['Keepalived', 'Failover 대기'],
     badges: [{ label: 'ai_db', tone: 'db' }, { label: 'member_db', tone: 'db' }, { label: 'board_db', tone: 'db' }, { label: 'chat_db', tone: 'db' }],
   },
@@ -43,8 +43,8 @@ const flows = [
 ];
 
 const replPairs = [
-  { left: '192.168.0.246 AI 서버', leftSub: 'ai_db MASTER', right: '192.168.0.249 DB 서버', rightSub: 'REPLICA + Failover' },
-  { left: '192.168.0.247 Back 서버', leftSub: 'member/board/chat MASTER', right: '192.168.0.249 DB 서버', rightSub: 'REPLICA + Failover' },
+  { left: '<AI_SERVER_IP> AI 서버', leftSub: 'ai_db MASTER', right: '<DB_SERVER_IP> DB 서버', rightSub: 'REPLICA + Failover' },
+  { left: '<BACK_SERVER_IP> Back 서버', leftSub: 'member/board/chat MASTER', right: '<DB_SERVER_IP> DB 서버', rightSub: 'REPLICA + Failover' },
 ];
 
 function tagChip(label: string, tone: Tag['tone']) {

@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   typescript: { ignoreBuildErrors: true },
-  allowedDevOrigins: ["192.168.0.248"],
+  allowedDevOrigins: ["<FRONT_SERVER_IP>"],
   outputFileTracingRoot: "/home/front4jo2/Project_HTML/project-html",
 
   webpack: (config, { isServer, webpack: wp }) => {

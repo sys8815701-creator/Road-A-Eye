@@ -14,15 +14,15 @@ type Server = {
 
 const servers: Server[] = [
   {
-    icon: '🤖', accent: '#7c3aed', vip: 'VIP 192.168.0.250', name: 'AI 서버', ip: '192.168.0.246',
+    icon: '🤖', accent: '#7c3aed', vip: 'VIP 192.168.0.250', name: 'AI 서버', ip: '<AI_SERVER_IP>',
     role: 'PRIMARY (MASTER)', dbs: ['ai_db (server-id=1)'],
   },
   {
-    icon: '⚙️', accent: '#0d9488', vip: 'VIP 192.168.0.251', name: 'Back-end 서버', ip: '192.168.0.247',
+    icon: '⚙️', accent: '#0d9488', vip: 'VIP 192.168.0.251', name: 'Back-end 서버', ip: '<BACK_SERVER_IP>',
     role: 'PRIMARY (MASTER)', dbs: ['member_db (server-id=2)', 'board_db', 'chat_db'],
   },
   {
-    icon: '</>', accent: '#6366f1', name: 'Front-end 서버', ip: '192.168.0.248',
+    icon: '</>', accent: '#6366f1', name: 'Front-end 서버', ip: '<FRONT_SERVER_IP>',
     dbs: [], note: 'JWT API 호출 · DB 직접 접속 불필요',
   },
 ];
@@ -125,7 +125,7 @@ export default function Chapter6_3() {
               <div style={{ background: '#fff1f2', border: '1px solid #fecdd3', borderRadius: 14, padding: '20px 18px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
                 <div style={{ fontSize: 42, marginBottom: 10 }}>🗄️</div>
                 <div style={{ fontSize: 31, fontWeight: 950, color: '#1f2d3d', marginBottom: 7 }}>DB 백업 서버</div>
-                <div style={{ fontSize: 22, color: '#1f2d3d', fontWeight: 900, fontFamily: 'monospace', marginBottom: 8 }}>192.168.0.249</div>
+                <div style={{ fontSize: 22, color: '#1f2d3d', fontWeight: 900, fontFamily: 'monospace', marginBottom: 8 }}><DB_SERVER_IP></div>
                 <div style={{ background: '#dc2626', color: '#fff', fontSize: 18, fontWeight: 950, padding: '10px 22px', borderRadius: 16 }}>BACKUP (REPLICA) + Failover 대기</div>
               </div>
 

@@ -20,11 +20,11 @@ import pymysql
 app = FastAPI()
 
 # --- CORS ---
-# 프론트 서버(192.168.0.248:3000)에서만 요청을 허용합니다.
+# 프론트 서버(<FRONT_SERVER_IP>:3000)에서만 요청을 허용합니다.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://192.168.0.248:3000",
+        "http://<FRONT_SERVER_IP>:3000",
         "http://localhost:3000",
     ],
     allow_methods=["*"],

@@ -129,7 +129,7 @@ EPOCHS_BIN = 25   # 에폭 늘리기
 ## 업로드
 
 ```
-http://192.168.0.246:8001/model-upload
+http://<AI_SERVER_IP>:8001/model-upload
 → Keras v3 선택 → highway_model_v14.keras
 ```
 
@@ -145,5 +145,5 @@ http://192.168.0.246:8001/model-upload
 ③ keras_finetune_v13.py 에서 EPOCHS_BIN=15, EPOCHS_TOP=5 로 수정
 ④ python keras_finetune_v13.py --model v13.keras --output v14.keras
 ⑤ 이상값 테스트 10~60% 범위 확인
-⑥ http://192.168.0.246:8001/model-upload 에서 업로드
+⑥ http://<AI_SERVER_IP>:8001/model-upload 에서 업로드
 ```

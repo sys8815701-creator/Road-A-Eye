@@ -5,7 +5,7 @@ export async function GET(req: NextRequest) {
   const code  = searchParams.get("code");
   const state = searchParams.get("state");
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://192.168.0.247:8000";
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://<BACK_SERVER_IP>:8000";
 
   const backendRes = await fetch(
     `${API_URL}/auth/google/callback?code=${code}&state=${state}`,
