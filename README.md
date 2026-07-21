@@ -87,7 +87,17 @@ MySQL DB (DB 백업 서버)     AI 추론 서버 (road-ai)
                         고속도로 CCTV 스트림 (ITS API, RTSP/HTTP)
 ```
 
-5개 서버로 역할을 분산했습니다. **AI 추론 서버(road-ai)** 는 Keras 게이트와 YOLOv8 · YOLOv11 앙상블 추론을 전담합니다. **백엔드 서버**는 REST API · JWT 인증 · AI 프록시와 함께, GPT-4o 기반 관제 어시스턴트(관제 대시보드 전용)를 직접 호출합니다. 별도의 **AI 챗봇 서버(highway-chatbot-server)** 는 공개 홈페이지에서 쓰이는 경량 챗봇(OpenAI gpt-4.1-mini)을 담당하며, 관제 대시보드의 어시스턴트와는 독립적으로 동작합니다. **프론트 서버**는 DB에 직접 접속하지 않고 백엔드 · 챗봇 서버의 API만 호출합니다. **DB 백업 서버**는 4개 DB(member · board · ai · chat)의 복제본을 보관하며, Keepalived 기반 VIP로 장애 시 자동 페일오버됩니다.
+5개 서버로 역할을 분산했습니다.
+
+**AI 추론 서버(road-ai)** 는 Keras 게이트와 YOLOv8 · YOLOv11 앙상블 추론을 전담합니다.
+
+**백엔드 서버**는 REST API · JWT 인증 · AI 프록시와 함께, GPT-4o 기반 관제 어시스턴트(관제 대시보드 전용)를 직접 호출합니다.
+
+별도의 **AI 챗봇 서버(highway-chatbot-server)** 는 공개 홈페이지에서 쓰이는 경량 챗봇(OpenAI gpt-4.1-mini)을 담당하며, 관제 대시보드의 어시스턴트와는 독립적으로 동작합니다.
+
+**프론트 서버**는 DB에 직접 접속하지 않고 백엔드 · 챗봇 서버의 API만 호출합니다.
+
+**DB 백업 서버**는 4개 DB(member · board · ai · chat)의 복제본을 보관하며, Keepalived 기반 VIP로 장애 시 자동 페일오버됩니다.
 
 ---
 
@@ -357,7 +367,9 @@ npm install
 npm run dev
 ```
 
-서버 최초 실행 시 SQLAlchemy `create_all`로 테이블이 자동 생성되고, 기본 관리자 계정이 시딩됩니다(`ADMIN_*` 환경변수 참조). 백엔드 서버 실행 후 `/docs` 경로에서 Swagger UI로 API 명세를 확인할 수 있습니다.
+서버 최초 실행 시 SQLAlchemy `create_all`로 테이블이 자동 생성되고, 기본 관리자 계정이 시딩됩니다. (`ADMIN_*` 환경변수 참조)
+
+백엔드 서버 실행 후 `/docs` 경로에서 Swagger UI로 API 명세를 확인할 수 있습니다.
 
 ---
 
@@ -399,7 +411,9 @@ MBC 아카데미 AI-X 3기 최종 프로젝트 4조로 진행했습니다.
 - **schemas** — Pydantic 기반 요청 · 응답 유효성 검사
 - **models** — SQLAlchemy ORM 엔티티
 
-AI 추론 서버(`ai/road-ai`)는 `api/v1`(엔드포인트) · `modules`(도메인 로직: keras · yolo · its) · `infrastructure`(모델 레지스트리 · 캐시 · 스토리지)로 구성해 추론 로직과 API 계층을 분리했습니다. `modules/chat`, `modules/llm`과 `api/v1/chat.py`, `api/v1/llm.py`는 코드는 존재하지만 아직 구현되지 않은 스캐폴드이며, 실제 LLM 기능은 백엔드(`chat_service.py`)와 별도의 챗봇 서버(`highway-chatbot-server`)에서 담당합니다.
+AI 추론 서버(`ai/road-ai`)는 `api/v1`(엔드포인트) · `modules`(도메인 로직: keras · yolo · its) · `infrastructure`(모델 레지스트리 · 캐시 · 스토리지)로 구성해 추론 로직과 API 계층을 분리했습니다.
+
+`modules/chat`, `modules/llm`과 `api/v1/chat.py`, `api/v1/llm.py`는 코드는 존재하지만 아직 구현되지 않은 스캐폴드이며, 실제 LLM 기능은 백엔드(`chat_service.py`)와 별도의 챗봇 서버(`highway-chatbot-server`)에서 담당합니다.
 
 ---
 
