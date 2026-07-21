@@ -139,6 +139,7 @@ Road-A-Eye/
     ├── keepalived/                       # MySQL HA용 VRRP 설정 예시
     └── systemd/                          # AI 서버 자동 기동 유닛 예시
 ```
+---
 
 ## 기술 스택
 
