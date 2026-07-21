@@ -149,22 +149,22 @@ Road-A-Eye/
 
 ## 기술 스택
 
-**개발 환경**
+- **개발 환경**
 Ubuntu 24.04 LTS · VSCode Remote SSH
 
-**프론트**
+- **프론트**
 Next.js 16(App Router) · React 19 · TypeScript · CSS Modules · recharts(통계 시각화)
 
-**백엔드**
+- **백엔드**
 FastAPI · Uvicorn · Python 3.11+ · SQLAlchemy 2.0(비동기 ORM) + aiomysql · JWT(PyJWT) · bcrypt · OpenCV(headless, RTSP → MJPEG 스트리밍)
 
-**AI · 모델**
+- **AI · 모델**
 Keras(MobileNetV2 전이학습, 1차 분류 게이트) · YOLOv8s / YOLOv11m(Ultralytics, 위험 물체 탐지) · OpenAI API(gpt-4o — 관제 어시스턴트, gpt-4.1-mini — 홈페이지 챗봇) · SSE 스트리밍
 
-**DB**
+- **DB**
 MySQL 8.0, Master-Master 복제 + Keepalived VIP 이중화
 
-**인프라 · 연동 · 협업**
+- **인프라 · 연동 · 협업**
 Keepalived(Failover) · ITS API(고속도로 CCTV 연동) · Git · Notion
 
 ---
