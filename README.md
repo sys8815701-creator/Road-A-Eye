@@ -89,15 +89,11 @@ MySQL DB (DB 백업 서버)     AI 추론 서버 (road-ai)
 
 5개 서버로 역할을 분산했습니다.
 
-**AI 추론 서버(road-ai)** 는 Keras 게이트와 YOLOv8 · YOLOv11 앙상블 추론을 전담합니다.
-
-**백엔드 서버**는 REST API · JWT 인증 · AI 프록시와 함께, GPT-4o 기반 관제 어시스턴트(관제 대시보드 전용)를 직접 호출합니다.
-
-별도의 **AI 챗봇 서버(highway-chatbot-server)** 는 공개 홈페이지에서 쓰이는 경량 챗봇(OpenAI gpt-4.1-mini)을 담당하며, 관제 대시보드의 어시스턴트와는 독립적으로 동작합니다.
-
-**프론트 서버**는 DB에 직접 접속하지 않고 백엔드 · 챗봇 서버의 API만 호출합니다.
-
-**DB 백업 서버**는 4개 DB(member · board · ai · chat)의 복제본을 보관하며, Keepalived 기반 VIP로 장애 시 자동 페일오버됩니다.
+- **AI 추론 서버(road-ai)** — Keras 게이트와 YOLOv8 · YOLOv11 앙상블 추론 전담
+- **백엔드 서버** — REST API · JWT 인증 · AI 프록시와 함께, GPT-4o 기반 관제 어시스턴트(관제 대시보드 전용) 직접 호출
+- **AI 챗봇 서버(highway-chatbot-server)** — 공개 홈페이지에서 쓰이는 경량 챗봇(OpenAI gpt-4.1-mini)을 담당하며, 관제 대시보드의 어시스턴트와는 독립적으로 동작
+- **프론트 서버** — DB에 직접 접속하지 않고 백엔드 · 챗봇 서버의 API만 호출
+- **DB 백업 서버** — 4개 DB(member · board · ai · chat)의 복제본을 보관하며, Keepalived 기반 VIP로 장애 시 자동 페일오버
 
 ---
 
