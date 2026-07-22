@@ -10,7 +10,7 @@
 - FastAPI 백엔드 자동 문서 : http://localhost:8000/docs
 - AI 추론 서버 자동 문서 : http://localhost:8001/docs
 - AI 챗봇 서버 자동 문서 : http://localhost:8002/docs
-- 홈페이지 : [http://localhost:3000](http://mbc-sw.iptime.org:3241/main)
+- 홈페이지 : http://mbc-sw.iptime.org:3241/main
 
 ---
 
